@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+
+:root{
+    --noto-japanese: 'Noto Sans JP', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--noto-japanese);
+    text-transform: capitalize;
+}
+
+.container{
+    min-height: 100vh;
+    /* I don't Like this number */
+    background: linear-gradient(#cc8e9b, #000519);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    padding-bottom: 120px;
+}
+
+.container span{
+    position: absolute;
+    background: #eb94ad;
+    z-index: -1;
+    pointer-events: none;
+    animation: anime 10s ease-out infinite;
+}
+
+@keyframes anime{
+    0%{
+        transform: translateY(-600px) scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(1200px) scale(1) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container form{
+    width: 350px;
+    background: rgba(255, 255, 255, .5);
+    padding: 50px 30px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, .1);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    border-top: 3px solid #fff9;
+    border-left: 3px solid #fff9;
+}
+
+.container form i{
+    display: block;
+    height: 110px;
+    width: 110px;
+    line-height: 110px;
+    text-align: center;
+    color: #f35496af;
+    border: 4px solid #f35496af;
+    border-radius: 50%;
+    font-size: 60px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.container form .box{
+    height: 30px;
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    margin: 10px;
+    padding: 0 18px;
+    font-size: 15px;
+    color: #666;
+    background: rgba(255, 255, 255, .5);
+    box-shadow: 0 2px 2px rgba(255, 255, 255, .2);
+    text-transform: none;
+}
+
+.container form input[type="submit"]{
+    height: 40px;
+    width: 160px;
+    border-radius: 50px;
+    color: #fff;
+    background: #d84783;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    margin: 14px 0;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, .6);
+}
+
+.container form input[type="submit"]:hover{
+    letter-spacing: 3px;
+    opacity: .8;
+}
+
+.container form p{
+    padding: 6px 0;
+    color: #000519;
+}
+
+.container form p a{
+    color: #d84783;
+}
+
